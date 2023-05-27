@@ -3,10 +3,10 @@ package vo;
 public class Subject {
 	private int subjectNo;
 	private String subjectName;
-	
 	private int subjectTime;
 	private String createdate;
 	private String updatedate;
+	
 	public int getSubjectNo() {
 		return subjectNo;
 	}
