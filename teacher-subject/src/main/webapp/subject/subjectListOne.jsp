@@ -6,6 +6,7 @@
 	SubjectDao dao = new SubjectDao();
 	
 	int subjectNo = Integer.parseInt(request.getParameter("subjectNo"));
+	
 	Subject subject = dao.selectSubjectOne(subjectNo);
 %>
 <!DOCTYPE html>
@@ -42,7 +43,7 @@
 		</tr>
 	</table>
 	<a href="<%=request.getContextPath()%>/subject/modifySubject.jsp?subjectNo=<%=subject.getSubjectNo() %>"><button type="button" class="btn btn-warning">수정</button></a>
-	<a href="<%=request.getContextPath()%>/subject/modifySubject.jsp?subjectNo=<%=subject.getSubjectNo() %>"><button type="button" class="btn btn-warning">삭제</button></a>
+	<a href="<%=request.getContextPath()%>/subject/removeSubject.jsp?subjectNo=<%=subject.getSubjectNo() %>"><button type="button" class="btn btn-warning">삭제</button></a>
 </div>
 </body>
 </html>

@@ -51,8 +51,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<div class="container mt-3 text-center">
-	<table class="table">
+<div class="container mt-3">
+	<a href="<%=request.getContextPath() %>/subject/addSubject.jsp"><button type="button" class="btn btn-warning">추가</button></a>
+	<table class="table text-center">
 	<thead class="table-warning">
 		<tr>
 			<th>Subject No</th>
