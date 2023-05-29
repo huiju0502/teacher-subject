@@ -4,7 +4,7 @@
 <%@ page import = "vo.*" %>
 <%
 	int subjectNo = Integer.parseInt(request.getParameter("subjectNo"));
-
+	
 	SubjectDao dao = new SubjectDao();
 	
 	Subject subject = dao.selectSubjectOne(subjectNo);
@@ -20,27 +20,15 @@
 </head>
 <body>
 <div class="container mt-3 text-center">
-	<form action="<%=request.getContextPath() %>/subject/modifySubjectAction.jsp" method="post">
+	<form action="<%=request.getContextPath() %>/subject/removeSubjectAction.jsp" method="post">
 		<table class="table">
 			<tr>
 				<th class="table-warning">Subject No</th>
 				<td><input type="text" name="subjectNo" value="<%=subject.getSubjectNo() %>" readonly="readonly"></td>
 			</tr>
 			<tr>
-				<th class="table-warning">Subject Name</th>
-				<td><input type="text" name="subjectName" value="<%=subject.getSubjectName() %>"></td>
-			</tr>
-			<tr>
-				<th class="table-warning">Subject time</th>
-				<td><input type="number" name="subjectTime" value="<%=subject.getSubjectTime() %>"></td>
-			</tr>
-			<tr>
-				<th class="table-warning">Createdate</th>
-				<td><%=subject.getCreatedate() %></td>
-			</tr>
-			<tr>
-				<th class="table-warning">Updatedate</th>
-				<td><%=subject.getUpdatedate() %></td>
+				<th class="table-warning">삭제 확인용 Subject No</th>				
+				<td><input type="number" name="ckSubjectNo"></td>
 			</tr>
 		</table>
 		<button type="submit" class="btn btn-warning">확인</button>

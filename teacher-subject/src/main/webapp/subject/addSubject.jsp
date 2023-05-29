@@ -12,21 +12,18 @@
 <body>
 <div class="container mt-3 text-center">
 	<form action="<%=request.getContextPath() %>/subject/addSubjectAction.jsp" method="post">
-	<table class="table">
-		<tr>
-			<th class="table-warning">Subject Name</th>
-			<td><input type="text" name="subjectName"></td>
-		</tr>
-		<tr>				
-			<th class="table-warning">Subject time</th>
-			<td><input type="number" name="subjectTime"></td>
-		</tr>
-	</table>
-	<button type="submit" class="btn btn-warning">확인</button>
+		<table class="table">
+			<tr>
+				<th class="table-warning">Subject Name</th>
+				<td><input type="text" name="subjectName"></td>
+			</tr>
+			<tr>				
+				<th class="table-warning">Subject time</th>
+				<td><input type="number" name="subjectTime"></td>
+			</tr>
+		</table>
+		<button type="submit" class="btn btn-warning">확인</button>
 	</form>
 </div>
-
-
-
 </body>
 </html>

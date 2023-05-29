@@ -6,6 +6,7 @@
 	TeacherDao dao = new TeacherDao();
 
 	int teacherNo = Integer.parseInt(request.getParameter("teacherNo"));
+	
 	Teacher teacher = dao.selectTeacherOne(teacherNo);
 %>
 <!DOCTYPE html>
